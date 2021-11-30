@@ -1,4 +1,4 @@
-package com.parkinglotsystem;
+package com.parkinglotsystem.models;
 
 public class ParkingSlot {
         private boolean isSlotFree;

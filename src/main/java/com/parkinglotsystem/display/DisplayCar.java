@@ -1,7 +1,7 @@
 package com.parkinglotsystem.display;
 
-import com.parkinglotsystem.ParkingFloor;
-import com.parkinglotsystem.ParkingSlot;
+import com.parkinglotsystem.models.ParkingFloor;
+import com.parkinglotsystem.models.ParkingSlot;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -30,8 +30,8 @@ public class DisplayCar implements Display {
     }
 
     public ArrayList<ArrayList<Integer>> getSlotsInfo(ParkingFloor eachFloor) {
-        for (int eachSlot = 3; eachSlot < eachFloor.slots.size(); eachSlot++) {
-            ParkingSlot slotPerFloor = eachFloor.slots.get(eachSlot);
+        for (int eachSlot = 3; eachSlot < eachFloor.getSlots().size(); eachSlot++) {
+            ParkingSlot slotPerFloor = eachFloor.getSlots().get(eachSlot);
             if (slotPerFloor.isSlotEmpty())
                 free_slots.add(eachSlot + 1);
             else occupied_slots.add(eachSlot + 1);

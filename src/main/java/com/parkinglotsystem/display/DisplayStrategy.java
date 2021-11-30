@@ -1,13 +1,13 @@
 package com.parkinglotsystem.display;
 
-import com.parkinglotsystem.ParkingFloor;
+import com.parkinglotsystem.models.ParkingFloor;
 
 import java.util.ArrayList;
 
-public class DisplayContext {
+public class DisplayStrategy {
     private final Display display;
 
-    public DisplayContext(Display display) {
+    public DisplayStrategy(Display display) {
         this.display = display;
     }
 

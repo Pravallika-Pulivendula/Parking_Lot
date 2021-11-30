@@ -1,8 +1,8 @@
-package com.parkinglotsystem;
+package com.parkinglotsystem.models;
 
 import java.util.*;
 
-public class Ticket {
+public class ParkingTicket {
     Map<String, ArrayList<String>> ticketIdOfVehicles = new HashMap<>();
 
     public String generateTicketId(String parkingLotId, String registrationNumber, String color, int floorNo, int slotNo) {

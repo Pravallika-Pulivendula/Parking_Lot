@@ -1,6 +1,6 @@
 package com.parkinglotsystem.display;
 
-import com.parkinglotsystem.ParkingFloor;
+import com.parkinglotsystem.models.ParkingFloor;
 
 import java.util.ArrayList;
 

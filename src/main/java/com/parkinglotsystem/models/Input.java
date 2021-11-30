@@ -1,6 +1,4 @@
-package com.parkinglotsystem.input;
-
-import com.parkinglotsystem.ParkingLot;
+package com.parkinglotsystem.models;
 
 import java.util.ArrayList;
 import java.util.Scanner;
