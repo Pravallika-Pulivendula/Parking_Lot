@@ -25,26 +25,24 @@ public class Main {
                     }
                 }
                 case park_vehicle -> {
-                    if (parkingLot != null) parkingLot.parkVehicle(VehicleType.valueOf(input[1]), input[2], input[3]);
-                    else System.out.println("Create parking lot first!");
+                    if(parkingLot == null) throw new NullPointerException("Create parking lot");
+                    parkingLot.parkVehicle(VehicleType.valueOf(input[1]), input[2], input[3]);
                 }
                 case unpark_vehicle -> {
-                    if (parkingLot != null) parkingLot.unParkVehicle(input[1]);
-                    else System.out.println("Create parking lot first!");
+                    if(parkingLot == null) throw new NullPointerException("Create parking lot");
+                    System.out.println(parkingLot.unParkVehicle(input[1]));
                 }
                 case display -> {
-                    if (parkingLot != null) {
-                        displayContext = parkingLot.getDisplayContext(VehicleType.valueOf(input[2]));
-                        switch (DisplayType.valueOf(input[1])) {
-                            case free_count -> displayContext.displayCount(parkingLot.getFloorDetails());
-                            case free_slots -> displayContext.displayFreeSlots(parkingLot.getFloorDetails());
-                            case occupied_slots -> displayContext.displayOccupiedSlots(parkingLot.getFloorDetails());
-                            default -> System.out.println("Enter valid display method");
-                        }
-                    } else
-                        System.out.println("Create parking lot first!");
+                    if (parkingLot == null) throw new NullPointerException("Create parking lot");
+                    displayContext = parkingLot.getDisplayContext(VehicleType.valueOf(input[2]));
+                    switch (DisplayType.valueOf(input[1])) {
+                        case free_count -> displayContext.displayCount(parkingLot.getFloorDetails());
+                        case free_slots -> displayContext.displayFreeSlots(parkingLot.getFloorDetails());
+                        case occupied_slots -> displayContext.displayOccupiedSlots(parkingLot.getFloorDetails());
+                        default -> System.out.println("Enter valid display method");
+                    }
                 }
-                default -> throw new IllegalStateException("Unexpected value: " + input[0]);
+                default -> throw new IllegalStateException("Enter valid command " + input[0]);
             }
         }
     }

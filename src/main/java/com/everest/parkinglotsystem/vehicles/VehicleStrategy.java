@@ -1,7 +1,7 @@
 package com.everest.parkinglotsystem.vehicles;
 
 import com.everest.parkinglotsystem.models.ParkingFloor;
-import com.everest.parkinglotsystem.models.Ticket;
+import com.everest.parkinglotsystem.models.ParkingTicket;
 
 import java.util.ArrayList;
 
@@ -12,7 +12,8 @@ public class VehicleStrategy {
         this.Vehicle = vehicle;
     }
 
-    public void parkTheVehicleType(ArrayList<ParkingFloor> floors, Ticket tickets, String registrationNumber, String vehicleColor) {
+    public void parkTheVehicleType(ArrayList<ParkingFloor> floors, ParkingTicket tickets, String registrationNumber, String vehicleColor) {
         System.out.println(this.Vehicle.parkVehicle(floors, tickets, registrationNumber, vehicleColor));
     }
+
 }
