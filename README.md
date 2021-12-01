@@ -97,13 +97,18 @@ To run the Java application in Intellij follow the below steps:
 
 - If you don't have the necessary JDK on your computer, select Download JDK. In the next dialog, specify the JDK vendor (for example, OpenJDK), version, change the installation path if required, and click Download.
 
-- Now, you are ready to create a new project and execute it. Name your project accordingly. 
 
 ### Run the application
 
 - Clone the application, open it in Intellij. 
+  ```
+  git clone https://github.com/Pravallika-Pulivendula/ParkingLot
+  ```
 
-- Running Java applications is very simple in Intellij. Just click the green arrow icon in the gutter and select Run Main.main() in the popup. The IDE starts compiling the code.
+- Running the application
+  ```
+  Ctrl + R
+  ```
 
-- When the compilation is complete, the Run tool window opens at the bottom of the screen where we can provide the input (in our case, the input commands like create_parking_lot). If everything goes well, you will get the required output.
+
 
