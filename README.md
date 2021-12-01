@@ -83,5 +83,27 @@ Print output based on the specific commands as mentioned below.
   Occupied slots for <vehicle_type> on Floor <floor_no>: <comma_separated_values_of_slot_nos>
   The above will be printed for each floor.
 
-### How to run the application
-Run the application just like any other Java program. Use the above mentioned possible commands to get the output.
+### Setup
+
+I have used the Intellij IDEA for this application, You can use any other IDE of your choice.
+
+To run the Java application in Intellij follow the below steps:
+
+- To develop Java applications in IntelliJ IDEA, you need the Java SDK (JDK).
+
+- If the necessary JDK is already defined in IntelliJ IDEA, select it from the Project SDK list.
+
+- If the JDK is installed on your computer, but not defined in the IDE, select Add JDK and specify the path to the JDK home directory (for example, /Library/Java/JavaVirtualMachines/jdk-13.0.1.jdk).
+
+- If you don't have the necessary JDK on your computer, select Download JDK. In the next dialog, specify the JDK vendor (for example, OpenJDK), version, change the installation path if required, and click Download.
+
+- Now, you are ready to create a new project and execute it. Name your project accordingly. 
+
+### Run the application
+
+- Clone the application, open it in Intellij. 
+
+- Running Java applications is very simple in Intellij. Just click the green arrow icon in the gutter and select Run Main.main() in the popup. The IDE starts compiling the code.
+
+- When the compilation is complete, the Run tool window opens at the bottom of the screen where we can provide the input (in our case, the input commands like create_parking_lot). If everything goes well, you will get the required output.
+
