@@ -22,13 +22,20 @@ public class ParkingLot {
     ParkingTicket tickets = new ParkingTicket();
     VehicleStrategy context;
     DisplayStrategy displayContext;
+    private static ParkingLot parkingLot = null;
 
-    public ParkingLot(String parkingLotId, int noOfFloors, int noOfSlots) {
+    private ParkingLot(String parkingLotId, int noOfFloors, int noOfSlots) {
         this.noOfFloors = noOfFloors;
         this.noOfSlots = noOfSlots;
         for (int floor = 0; floor < noOfFloors; floor++) {
             this.floors.add(new ParkingFloor(this.noOfSlots));
         }
+    }
+
+    public static ParkingLot getInstance(String parkingLotId,int noOfFloors,int noOfSlots){
+        if(parkingLot != null) throw new AssertionError("Already parking lot created");
+        parkingLot = new ParkingLot(parkingLotId, noOfFloors, noOfSlots);
+        return parkingLot;
     }
 
     public void createParkingLot() {
